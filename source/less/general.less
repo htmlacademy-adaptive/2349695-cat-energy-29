@@ -11,6 +11,14 @@ body {
   color: #444;
 }
 
+.catalog__body {
+  color: #444;
+  font-family: "Lato", serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -38,17 +46,24 @@ a {
 }
 
 .button {
-  max-width: 192px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: "Oswald", serif;
   font-size: 16px;
   line-height: 20px;
   color: #FFF;
   background-color: #68B738;
-  text-decoration: none;
   text-transform: uppercase;
-  display: block;
   text-align: center;
-  padding: 10px 44px;
+  box-sizing: border-box;
+  padding: 10px 95px;
+  text-decoration: none;
   border:none;
   cursor: pointer;
+}
+
+button--more {
+  background-color: #F2F2F2;
+  color:#444;
 }
