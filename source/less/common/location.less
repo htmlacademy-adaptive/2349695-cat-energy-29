@@ -1,10 +1,15 @@
 .location__wrapper {
   padding: 26px 20px;
   display: flex;
+
+  @media (min-width: @tablet-width) {
+    padding: 60px 70px;
+    justify-content: space-between;
+  }
 }
 
 .location__wrapper--catalog {
-background-color: #F2F2F2;
+  background-color: #F2F2F2;
 }
 
 .location__text {
@@ -16,6 +21,12 @@ background-color: #F2F2F2;
   line-height: 20px;
   text-transform: uppercase;
   min-width: 140px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 26px;
+    max-width: 165px;
+  }
 }
 
 .location__address {
@@ -24,8 +35,23 @@ background-color: #F2F2F2;
   line-height: 20px;
   font-style: normal;
   text-transform: none;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    max-width: 160px;
+    text-align: end;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 }
 
 .location__map {
   display: block;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    height: 400px;
+    object-fit: cover;
+  }
 }
