@@ -1,6 +1,5 @@
-
 .main-nav__list {
-  display:none;
+  display: none;
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -9,10 +8,27 @@
   top: 100%;
   background-color: #FFF;
   width: 100%;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .nav-list__item {
   padding: 22px 0 24px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    margin-right: 33px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .nav-list__item:last-child {
+    margin-right: 0;
+  }
 }
 
 .nav-list__link {
@@ -23,4 +39,9 @@
   line-height: 20px;
   text-transform: uppercase;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+    line-height: 24px;
+  }
 }
