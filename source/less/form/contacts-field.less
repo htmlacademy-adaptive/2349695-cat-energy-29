@@ -4,6 +4,17 @@
   @media (min-width: @tablet-width) {
     margin-bottom: 65px;
   }
+  @media (min-width: @desktop-width) {
+    margin-bottom: 70px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contacts-list {
+    display: grid;
+    grid-template-columns: 569px 569px;
+    column-gap: 80px;
+  }
 }
 
 .contacts-list__item {
@@ -13,6 +24,9 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 20px;
+  }
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
   }
 }
 

@@ -4,6 +4,10 @@
   @media (min-width: @tablet-width) {
     margin-bottom: 54px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 61px;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -15,8 +19,18 @@
   }
 }
 
+@media (min-width: @desktop-width) {
+  .additionally-list {
+    display: flex;
+  }
+}
+
 .additionally-list__item {
   margin-bottom: 13px;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+  }
 }
 
 .additionally-list__item:last-child {
@@ -29,5 +43,8 @@
 
   @media (min-width: @tablet-width) {
     margin-right: 15px;
+  }
+  @media (min-width: @desktop-width) {
+    margin-right: 20px;
   }
 }

@@ -8,12 +8,20 @@
     border: 1px solid #E7E7E7;
     padding: 23px 27px;
   }
+  @media (min-width: @desktop-width) {
+    width:570px;
+    margin:0;
+  }
 }
 
 .purpose-list__item {
   margin-bottom: 13px;
   display: flex;
   align-items: center;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 18px;
+  }
 }
 
 .purpose-list__item:last-child {
