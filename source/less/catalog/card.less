@@ -5,6 +5,13 @@
   justify-items: center;
   padding: 20px;
   padding-bottom: 25px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    padding: 0 37px 40px 37px;
+    background-image: linear-gradient(to top, #f2f2f2 84%, #ffffff 16%);
+  }
 }
 
 .card--more {
@@ -12,6 +19,13 @@
   grid-template-columns: repeat(2, 140px);
   padding: 20px;
   padding-bottom: 25px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 20px 40px 20px;
+    border: 2px solid #F2F2F2;
+  }
 }
 
 .more__title {
@@ -26,6 +40,13 @@
   line-height: 20px;
   text-transform: uppercase;
   margin-bottom: 8px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 110px;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 23px;
+  }
 }
 
 .more__text {
@@ -37,12 +58,24 @@
   font-size: 12px;
   line-height: 16px;
   margin-bottom: 21px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 18px;
+    margin-bottom: 82px;
+  }
 }
 
 .card__image {
   grid-row: 1 / 3;
   display: block;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 200px;
+    height: 210px;
+    margin-bottom: 22px;
+  }
 }
 
 .card__title {
@@ -56,6 +89,14 @@
   text-transform: uppercase;
   margin-bottom: 14px;
   justify-self: flex-start;
+
+  @media (min-width: @tablet-width) {
+    width: 135px;
+    margin-bottom: 21px;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+  }
 }
 
 .card__list {
@@ -63,6 +104,11 @@
   grid-column: 2 / 3;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+
+  @media (min-width: @tablet-width) {
+    width:250px;
+    row-gap: 12px;
+  }
 }
 
 .card__category {
@@ -78,10 +124,14 @@
   margin-top: 17px;
   grid-column: 1 / -1;
   width: 100%;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 32px;
+  }
 }
 
 .card__button--more {
   margin: 0;
   background-color: #F2F2F2;
-  color:#444;
+  color: #444;
 }
