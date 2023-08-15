@@ -1,6 +1,13 @@
 .purpose-field {
   margin-top:22px;
   margin-bottom:25px;
+
+  @media (min-width: @tablet-width) {
+    margin-top:0;
+    margin-bottom: 65px;
+    border: 1px solid #E7E7E7;
+    padding: 23px 27px;
+  }
 }
 
 .purpose-list__item {
@@ -16,4 +23,8 @@
 .purpose-list__check {
   margin:0;
   margin-right:15px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 20px;
+  }
 }

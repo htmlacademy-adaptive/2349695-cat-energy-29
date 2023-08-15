@@ -1,11 +1,22 @@
 .additionally-field {
-  margin-bottom:34px;
+  margin-bottom: 34px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 54px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .additionally-list {
+    display: grid;
+    grid-template-columns: repeat(2, 221px);
+    column-gap: 100px;
+    row-gap: 32px;
+  }
 }
 
 .additionally-list__item {
   margin-bottom: 13px;
-  display: flex;
-  align-items: center;
 }
 
 .additionally-list__item:last-child {
@@ -13,6 +24,10 @@
 }
 
 .additionally-list__check {
-  margin:0;
-  margin-right:15px;
+  margin: 0;
+  margin-right: 15px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 15px;
+  }
 }
