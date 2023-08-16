@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html class="form" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML Academy: Кэт энерджи</title>
+  <link rel="stylesheet" href="css/style.css">
+  <base href="https://htmlacademy-adaptive.github.io/2349695-cat-energy-29/4/">
+</head>
+
+<body class="form__body">
+  <div class="wrapper">
+    <header class="main-header">
+      <a class="main-header__logo">
+        <img class="main-header__logo--image" src="img/index/logo.svg" width="33" height="38"
+          alt="Логотип Кэт энерджи.">
+        <img class="main-header__logo--text" src="img/index/logo-name.svg" width="101" height="18"
+          alt="Название Кэт энерджи.">
+      </a>
+      <button class="main-header__toggle" type="button">
+        <span class="visually-hidden">Открыть или закрыть выпадающее меню.</span>
+      </button>
+      <nav class="main-nav">
+        <ul class="main-nav__list nav-list">
+          <li class="nav-list__item">
+            <a class="nav-list__link" href="index.html">Главная</a>
+          </li>
+          <li class="nav-list__item">
+            <a class="nav-list__link" href="catalog.html">Каталог продукции</a>
+          </li>
+          <li class="nav-list__item">
+            <a class="nav-list__link nav-list__link--current" href="#">Подбор программы</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+  <main class="form-container">
+    <section class="selection">
+      <h1 class="form-container__title title">Подбор программы</h1>
+      <p class="selection__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+      <form class="selection__form selection-form" action="https://echo.htmlacademy.ru/" method="get">
+        <div class="selection-form__wrapper">
+        <fieldset class="selection-form__group personality-field">
+          <legend class="selection-form__title visually-hidden">Данные о животном.</legend>
+          <ul class="selection-form__list personality-list">
+            <li class="personality-list__item">
+              <label class="personality-list__label" for="pet-name">Имя:*</label>
+              <input class="personality-list__input" type="text" name="pet-name" id="pet-name" placeholder="Барсик"
+                required>
+            </li>
+            <li class="personality-list__item">
+              <label class="personality-list__label" for="pet-weight">Вес (кг):*</label>
+              <input class="personality-list__input" type="text" name="pet-weight" id="pet-weight" placeholder="7"
+                required>
+            </li>
+            <li class="personality-list__item">
+              <label class="personality-list__label" for="pet-age">Возраст (лет):</label>
+              <input class="personality-list__input" type="text" name="pet-age" id="pet-age" placeholder="7">
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="selection-form__group purpose-field">
+          <legend class="selection-form__title visually-hidden">Желаемый результат.</legend>
+          <ul class="selection-form__list purpose-list">
+            <li class="purpose-list__item">
+              <label class="purpose-list__label">
+                <input class="purpose-list__check purpose-list__check--radio" type="radio" name="program"
+                  value="losing-weight" checked>
+                <span class="purpose-list__title">Похудение</span>
+              </label>
+            </li>
+            <li class="purpose-list__item">
+              <label class="purpose-list__label">
+                <input class="purpose-list__check purpose-list__check--radio" type="radio" name="program"
+                  value="weight-gain">
+                <span class="purpose-list__title">Набор массы</span>
+              </label>
+            </li>
+            <li class="purpose-list__item">
+              <label class="purpose-list__label">
+                <input class="purpose-list__check purpose-list__check--radio" type="radio" name="program"
+                  value="dont-know">
+                <span class="purpose-list__title">Не знаю (Нужен ваш совет)</span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        </div>
+        <fieldset class="selection-form__group contacts-field">
+          <legend class="selection-form__title">Контактные данные (владельца кота)</legend>
+          <ul class="selection-form__list contacts-list">
+            <li class="contacts-list__item">
+              <label class="contacts-list__label" for="email">E-mail:*</label>
+              <input class="contacts-list__input contacts-list__input--envelope" type="email" name="email" id="email"
+                placeholder="kuklachev@gmail.com" required>
+            </li>
+            <li class="contacts-list__item">
+              <label class="contacts-list__label" for="phone">Телефон:*</label>
+              <input class="contacts-list__input contacts-list__input--phone" type="tel" name="phone" id="phone"
+                placeholder="8 (960) 900-60-90" required>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="selection-form__group comment-field">
+          <legend class="selection-form__title">Комментарий</legend>
+          <label class="selection-form__label" for="comment">
+            <textarea class="selection-form__textarea" name="comment" id="comment" rows="5"
+              placeholder="Расскажите обо всех повадках кота"></textarea>
+          </label>
+        </fieldset>
+        <fieldset class="selection-form__group additionally-field">
+          <legend class="selection-form__title">Дополнительно</legend>
+          <ul class="selection-form__list additionally-list">
+            <li class="additionally-list__item">
+              <label class="additionally-list__label">
+                <input class="additionally-list__check additionally-list__check--checkbox" type="checkbox"
+                  name="additionally" checked>
+                <span class="additionally-list__title">Сахарозаменитель</span>
+              </label>
+            </li>
+            <li class="additionally-list__item">
+              <label class="additionally-list__label">
+                <input class="additionally-list__check additionally-list__check--checkbox" type="checkbox"
+                  name="additionally">
+                <span class="additionally-list__title">Питьевая вода</span>
+              </label>
+            </li>
+            <li class="additionally-list__item">
+              <label class="additionally-list__label">
+                <input class="additionally-list__check additionally-list__check--checkbox" type="checkbox"
+                  name="additionally">
+                <span class="additionally-list__title">Молоко</span>
+              </label>
+            </li>
+            <li class="additionally-list__item">
+              <label class="additionally-list__label">
+                <input class="additionally-list__check additionally-list__check--checkbox" type="checkbox"
+                  name="additionally">
+                <span class="additionally-list__title">Витамины</span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <div class="selection-form__submit-wrapper">
+          <button class="selection-form__button button" type="submit">Отправить заявку</button>
+          <span class="selection-form__note">* — Обязательные поля</span>
+        </div>
+      </form>
+    </section>
+  </main>
+  <footer class="main-footer">
+    <div class="wrapper">
+      <section class="main-footer__location location">
+        <div class="location__wrapper location__wrapper--form">
+          <h2 class="visually-hidden">Наш адрес</h2>
+          <p class="location__text">Приглашаем к сотрудничеству дилеров!</p>
+          <address class="location__address">ул. Большая Конюшенная, д. 19/8 <span
+              class=location__city>Санкт-Петербург</span></address>
+        </div>
+        <img class="location__map" src="img/index/location.jpg" width="320" height="362"
+          alt="Местоположение Кэн энерджи на карте.">
+      </section>
+      <section class="main-footer__contacts contacts">
+        <a class="main-footer__logo">
+          <img class="logo__image" src="img/index/logo-footer.svg" width="128" height="24" alt="Название Кэт энерджи.">
+        </a>
+        <ul class="socials-list">
+          <li class="socials-list__item">
+            <a class="socials-list__link" href="#">
+              <span class="visually-hidden">Логотип Вконтакте.</span>
+            </a>
+          </li>
+          <li class="socials-list__item">
+            <a class="socials-list__link" href="#">
+              <span class="visually-hidden">Логотип YouTube.</span>
+            </a>
+          </li>
+          <li class="socials-list__item">
+            <a class="socials-list__link" href="#">
+              <span class="visually-hidden">Логотип Telegram.</span>
+            </a>
+          </li>
+        </ul>
+        <a class="main-footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive">
+          <b class="copyright__text">HTML Academy</b>
+          <svg xmlns="http://www.w3.org/2000/svg" width="27" height="34" viewBox="0 0 27 34" fill="none">
+            <g clip-path="url(#clip0_93020_69)">
+              <path
+                d="M13.6426 0.0157537L13.5 0L0 1.40733V26.0129L13.5 34L27 26.0129V1.40733L13.6426 0.0157537ZM25.2344 25.0151L13.5 31.9573L1.76561 25.0151V14.9293L13.4507 21.8451L13.4701 23.0984L5.45351 18.3548L5.44295 19.5801L13.4894 24.3885L13.5088 25.675L5.46408 20.9174L5.45351 22.1427L13.5 26.9511L21.6239 22.1182V20.8929V16.909L25.2432 14.7595L25.2344 25.0151ZM25.2344 13.4519L22.0147 15.3319L20.5325 16.2071L13.4666 12.0201L13.456 13.2454L19.4957 16.818L19.4429 16.8495L19.3126 16.9247L18.4536 17.4166L13.4666 14.4689L13.456 15.6942L17.3921 18.0222L16.4591 18.6314L16.438 18.6436L13.4666 16.902L13.456 18.1273L15.4029 19.2615L13.4155 20.4483L1.7973 13.5762L13.4349 6.61831L25.2344 13.4519ZM25.2344 12.2266L13.4401 5.31075L1.76561 12.2196V2.9897L13.5 1.76442L25.2344 2.9897V12.2266Z"
+                fill="#666666" />
+            </g>
+            <defs>
+              <clipPath id="clip0_93020_69">
+                <rect width="27" height="34" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+        </a>
+      </section>
+    </div>
+  </footer>
+</body>
+
+</html>
