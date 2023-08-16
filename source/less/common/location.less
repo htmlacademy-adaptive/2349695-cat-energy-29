@@ -12,6 +12,7 @@
     padding: 60px 70px;
     justify-content: space-between;
   }
+
   @media (min-width: @desktop-width) {
     max-width: 565px;
     padding: 60px 80px;
@@ -24,8 +25,12 @@
 }
 
 .location__wrapper--catalog,
-.location__wrapper--form  {
+.location__wrapper--form {
   background-color: #F2F2F2;
+
+  @media (min-width: @desktop-width) {
+    background-color: #FFF;
+  }
 }
 
 .location__text {
@@ -60,6 +65,7 @@
     flex-direction: column;
     justify-content: space-between;
   }
+
   @media (min-width: @desktop-width) {
     text-align: start;
   }
@@ -70,9 +76,10 @@
 
   @media (min-width: @tablet-width) {
     width: 768px;
-    height:400px;
+    height: 400px;
 
   }
+
   @media (min-width: @desktop-width) {
     width: 100%;
     height: 400px;
