@@ -10,18 +10,17 @@
   }
 }
 
-@media (min-width: @tablet-width) {
-  .additionally-list {
+
+.additionally-list {
+  @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: repeat(2, 221px);
     column-gap: 100px;
     row-gap: 32px;
   }
-}
-
-@media (min-width: @desktop-width) {
-  .additionally-list {
-    display: flex;
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(4, 305px);
+    gap:0;
   }
 }
 
@@ -44,6 +43,7 @@
   @media (min-width: @tablet-width) {
     margin-right: 15px;
   }
+
   @media (min-width: @desktop-width) {
     margin-right: 20px;
   }

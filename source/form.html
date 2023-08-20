@@ -41,51 +41,51 @@
       <p class="selection__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
       <form class="selection__form selection-form" action="https://echo.htmlacademy.ru/" method="get">
         <div class="selection-form__wrapper">
-        <fieldset class="selection-form__group personality-field">
-          <legend class="selection-form__title visually-hidden">Данные о животном.</legend>
-          <ul class="selection-form__list personality-list">
-            <li class="personality-list__item">
-              <label class="personality-list__label" for="pet-name">Имя:*</label>
-              <input class="personality-list__input" type="text" name="pet-name" id="pet-name" placeholder="Барсик"
-                required>
-            </li>
-            <li class="personality-list__item">
-              <label class="personality-list__label" for="pet-weight">Вес (кг):*</label>
-              <input class="personality-list__input" type="text" name="pet-weight" id="pet-weight" placeholder="7"
-                required>
-            </li>
-            <li class="personality-list__item">
-              <label class="personality-list__label" for="pet-age">Возраст (лет):</label>
-              <input class="personality-list__input" type="text" name="pet-age" id="pet-age" placeholder="7">
-            </li>
-          </ul>
-        </fieldset>
-        <fieldset class="selection-form__group purpose-field">
-          <legend class="selection-form__title visually-hidden">Желаемый результат.</legend>
-          <ul class="selection-form__list purpose-list">
-            <li class="purpose-list__item">
-              <label class="purpose-list__label">
-                <input class="purpose-list__check purpose-list__check--radio" type="radio" name="program"
-                  value="losing-weight" checked>
-                <span class="purpose-list__title">Похудение</span>
-              </label>
-            </li>
-            <li class="purpose-list__item">
-              <label class="purpose-list__label">
-                <input class="purpose-list__check purpose-list__check--radio" type="radio" name="program"
-                  value="weight-gain">
-                <span class="purpose-list__title">Набор массы</span>
-              </label>
-            </li>
-            <li class="purpose-list__item">
-              <label class="purpose-list__label">
-                <input class="purpose-list__check purpose-list__check--radio" type="radio" name="program"
-                  value="dont-know">
-                <span class="purpose-list__title">Не знаю (Нужен ваш совет)</span>
-              </label>
-            </li>
-          </ul>
-        </fieldset>
+          <fieldset class="selection-form__group personality-field">
+            <legend class="selection-form__title visually-hidden">Данные о животном.</legend>
+            <ul class="selection-form__list personality-list">
+              <li class="personality-list__item">
+                <label class="personality-list__label" for="pet-name">Имя:*</label>
+                <input class="personality-list__input" type="text" name="pet-name" id="pet-name" placeholder="Барсик"
+                  required>
+              </li>
+              <li class="personality-list__item">
+                <label class="personality-list__label" for="pet-weight">Вес (кг):*</label>
+                <input class="personality-list__input" type="text" name="pet-weight" id="pet-weight" placeholder="7"
+                  required>
+              </li>
+              <li class="personality-list__item">
+                <label class="personality-list__label" for="pet-age">Возраст (лет):</label>
+                <input class="personality-list__input" type="text" name="pet-age" id="pet-age" placeholder="7">
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="selection-form__group purpose-field">
+            <legend class="selection-form__title visually-hidden">Желаемый результат.</legend>
+            <ul class="selection-form__list purpose-list">
+              <li class="purpose-list__item">
+                <label class="purpose-list__label">
+                  <input class="purpose-list__check purpose-list__check--radio" type="radio" name="program"
+                    value="losing-weight" checked>
+                  <span class="purpose-list__title">Похудение</span>
+                </label>
+              </li>
+              <li class="purpose-list__item">
+                <label class="purpose-list__label">
+                  <input class="purpose-list__check purpose-list__check--radio" type="radio" name="program"
+                    value="weight-gain">
+                  <span class="purpose-list__title">Набор массы</span>
+                </label>
+              </li>
+              <li class="purpose-list__item">
+                <label class="purpose-list__label">
+                  <input class="purpose-list__check purpose-list__check--radio" type="radio" name="program"
+                    value="dont-know">
+                  <span class="purpose-list__title">Не знаю (Нужен ваш совет)</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
         </div>
         <fieldset class="selection-form__group contacts-field">
           <legend class="selection-form__title">Контактные данные (владельца кота)</legend>
@@ -150,17 +150,17 @@
     </section>
   </main>
   <footer class="main-footer">
-    <div class="wrapper">
-      <section class="main-footer__location location">
-        <div class="location__wrapper location__wrapper--form">
-          <h2 class="visually-hidden">Наш адрес</h2>
-          <p class="location__text">Приглашаем к сотрудничеству дилеров!</p>
-          <address class="location__address">ул. Большая Конюшенная, д. 19/8 <span
-              class=location__city>Санкт-Петербург</span></address>
-        </div>
-        <img class="location__map" src="img/index/location.jpg" width="320" height="362"
-          alt="Местоположение Кэн энерджи на карте.">
-      </section>
+    <section class="main-footer__location location">
+      <div class="location__wrapper location__wrapper--form">
+        <h2 class="visually-hidden">Наш адрес</h2>
+        <p class="location__text">Приглашаем к сотрудничеству дилеров!</p>
+        <address class="location__address">ул. Большая Конюшенная, д. 19/8 <span
+            class=location__city>Санкт-Петербург</span></address>
+      </div>
+      <img class="location__map" src="img/index/location.jpg" width="320" height="362"
+        alt="Местоположение Кэн энерджи на карте.">
+    </section>
+    <div class="contacts__wrapper">
       <section class="main-footer__contacts contacts">
         <a class="main-footer__logo">
           <img class="logo__image" src="img/index/logo-footer.svg" width="128" height="24" alt="Название Кэт энерджи.">
