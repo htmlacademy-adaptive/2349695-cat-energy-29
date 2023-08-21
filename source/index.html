@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -22,13 +23,13 @@
       <nav class="main-nav">
         <ul class="main-nav__list nav-list">
           <li class="nav-list__item">
-            <a class="nav-list__link" href="#">Главная</a>
+            <a class="nav-list__link nav-list__link--index nav-list__link--current" href="#">Главная</a>
           </li>
           <li class="nav-list__item">
-            <a class="nav-list__link" href="catalog.html">Каталог продукции</a>
+            <a class="nav-list__link nav-list__link--index" href="catalog.html">Каталог продукции</a>
           </li>
           <li class="nav-list__item">
-            <a class="nav-list__link" href="form.html">Подбор программы</a>
+            <a class="nav-list__link nav-list__link--index" href="form.html">Подбор программы</a>
           </li>
         </ul>
       </nav>
@@ -98,28 +99,28 @@
             <dt class="example__number">60 дней</dt>
             <dd class="example__description">затрачено времени</dd>
           </dl>
+          <p class="example__text-total">Затраты на питание: <span class=example__price>15 000 РУБ.</span></p>
         </div>
-        <p class="example__text-total">Затраты на питание: 15 000 РУБ.</p>
-        <!-- Не совсем понимаю, как разметить слайдер, поэтому просто вставлю две контекстные картинки из макета-->
         <img class="slider__image" src="img/index/example-slider.png" width="280" height="256"
           alt="СлайдерЖ форма кота до и после.">
       </div>
     </section>
   </main>
   <footer class="main-footer">
-    <div class="wrapper">
-      <section class="main-footer__location location">
-        <div class="location__wrapper">
-          <h2 class="visually-hidden">Наш адрес</h2>
-          <p class="location__text">Приглашаем к сотрудничеству дилеров!</p>
-          <address class="location__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
-        </div>
-        <img class="location__map" src="img/index/location.jpg" width="320" height="362"
-          alt="Местоположение Кэн энерджи на карте.">
-      </section>
-      <section class="main-footer__contacts contacts">
-        <a class="main-footer__logo">
-          <img class="logo__image" src="img/index/logo-footer.svg" width="128" height="24" alt="Название Кэт энерджи.">
+    <section class="main-footer__location location">
+      <div class="location__wrapper">
+        <h2 class="visually-hidden">Наш адрес</h2>
+        <p class="location__text">Приглашаем к сотрудничеству дилеров!</p>
+        <address class="location__address">ул. Большая Конюшенная, д. 19/8 <span
+            class=location__city>Санкт-Петербург</span></address>
+      </div>
+      <img class="location__map" src="img/index/location.jpg" width="320" height="362"
+        alt="Местоположение Кэн энерджи на карте.">
+    </section>
+    <div class="contacts__wrapper">
+    <section class="main-footer__contacts contacts">
+      <a class="main-footer__logo">
+        <img class="logo__image" src="img/index/logo-footer.svg" width="128" height="24" alt="Название Кэт энерджи.">
         </a>
         <ul class="socials-list">
           <li class="socials-list__item">
@@ -153,7 +154,7 @@
             </defs>
           </svg>
         </a>
-      </section>
+    </section>
     </div>
   </footer>
 </body>

@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -25,7 +26,7 @@
             <a class="nav-list__link" href="index.html">Главная</a>
           </li>
           <li class="nav-list__item">
-            <a class="nav-list__link" href="#">Каталог продукции</a>
+            <a class="nav-list__link nav-list__link--current" href="#">Каталог продукции</a>
           </li>
           <li class="nav-list__item">
             <a class="nav-list__link" href="form.html">Подбор программы</a>
@@ -121,15 +122,15 @@
         <li class="products-list__item card">
           <img class="card__image" src="img/catalog/product-7.jpg" width="84" height="100" alt="Cat Energy SLIM 500 г.">
           <div class="card__text">
-          <h3 class="card__title">Cat Energy SLIM 500 г</h3>
-          <dl class="card__list">
-            <dt class="card__category">Масса</dt>
-            <dd class="card__value">500 г</dd>
-            <dt class="card__category">Вкус</dt>
-            <dd class="card__value">Рис</dd>
-            <dt class="card__category">Цена</dt>
-            <dd class="card__value">500 ₽</dd>
-          </dl>
+            <h3 class="card__title">Cat Energy SLIM 500 г</h3>
+            <dl class="card__list">
+              <dt class="card__category">Масса</dt>
+              <dd class="card__value">500 г</dd>
+              <dt class="card__category">Вкус</dt>
+              <dd class="card__value">Рис</dd>
+              <dt class="card__category">Цена</dt>
+              <dd class="card__value">500 ₽</dd>
+            </dl>
           </div>
           <button class="card__button button" type="button">Заказать</button>
         </li>
@@ -140,58 +141,70 @@
         </li>
       </ul>
     </section>
-    <section class="additional">
-      <h2 class="additional__title">Дополнительные товары</h2>
-      <ul class="additional__list additional-product">
-        <li class="additional-product__item">
-          <h3 class="additional-product__title">Сахарозаменитель</h3>
-          <dl class="additional-product__list">
-            <dt class="additional-product__quantity">1 упаковка (100 г)</dt>
-            <dd class="additional-product__value">200 ₽</dd>
-          </dl>
-          <button class="additional-product__button button" type="button">Заказать</button>
-        </li>
-        <li class="additional-product__item">
-          <h3 class="additional-product__title">Питьевая вода</h3>
-          <dl class="additional-product__list">
-            <dt class="additional-product__quantity">5 литров</dt>
-            <dd class="additional-product__value">50 ₽</dd>
-          </dl>
-          <button class="additional-product__button button" type="button">Заказать</button>
-        </li>
-        <li class="additional-product__item">
-          <h3 class="additional-product__title">Молоко</h3>
-          <dl class="additional-product__list">
-            <dt class="additional-product__quantity">1 литр</dt>
-            <dd class="additional-product__value">100 ₽</dd>
-          </dl>
-          <button class="additional-product__button button" type="button">Заказать</button>
-        </li>
-        <li class="additional-product__item">
-          <h3 class="additional-product__title">Витамины</h3>
-          <dl class="additional-product__list">
-            <dt class="additional-product__quantity">1 упаковка (30 г)</dt>
-            <dd class="additional-product__value">300 ₽</dd>
-          </dl>
-          <button class="additional-product__button button" type="button">Заказать</button>
-        </li>
-      </ul>
-    </section>
-    <article class="catalog-article catalog-article--gift">
-      <p class="catalog-article__text">Закажите все и получите чехол для кота в подарок!</p>
-    </article>
+    <div class="catalog-container__wrapper">
+      <section class="additional">
+        <h2 class="additional__title">Дополнительные товары</h2>
+
+        <ul class="additional__list additional-product">
+          <li class="additional-product__item">
+            <div class="additional-product__wrapper">
+              <h3 class="additional-product__title">Сахарозаменитель</h3>
+              <dl class="additional-product__list">
+                <dt class="additional-product__quantity">1 упаковка (100 г)</dt>
+                <dd class="additional-product__value">200 ₽</dd>
+              </dl>
+            </div>
+            <button class="additional-product__button button" type="button">Заказать</button>
+          </li>
+          <li class="additional-product__item">
+            <div class="additional-product__wrapper">
+              <h3 class="additional-product__title">Питьевая вода</h3>
+              <dl class="additional-product__list">
+                <dt class="additional-product__quantity">5 литров</dt>
+                <dd class="additional-product__value">50 ₽</dd>
+              </dl>
+            </div>
+            <button class="additional-product__button button" type="button">Заказать</button>
+          </li>
+          <li class="additional-product__item">
+            <div class="additional-product__wrapper">
+              <h3 class="additional-product__title">Молоко</h3>
+              <dl class="additional-product__list">
+                <dt class="additional-product__quantity">1 литр</dt>
+                <dd class="additional-product__value">100 ₽</dd>
+              </dl>
+            </div>
+            <button class="additional-product__button button" type="button">Заказать</button>
+          </li>
+          <li class="additional-product__item">
+            <div class="additional-product__wrapper">
+              <h3 class="additional-product__title">Витамины</h3>
+              <dl class="additional-product__list">
+                <dt class="additional-product__quantity">1 упаковка (30 г)</dt>
+                <dd class="additional-product__value">300 ₽</dd>
+              </dl>
+            </div>
+            <button class="additional-product__button button" type="button">Заказать</button>
+          </li>
+        </ul>
+      </section>
+      <article class="catalog-article catalog-article--gift">
+        <p class="catalog-article__text">Закажите все и получите чехол для кота в подарок!</p>
+      </article>
+    </div>
   </main>
   <footer class="main-footer">
-    <div class="wrapper">
       <section class="main-footer__location location">
         <div class="location__wrapper location__wrapper--catalog">
           <h2 class="visually-hidden">Наш адрес</h2>
           <p class="location__text">Приглашаем к сотрудничеству дилеров!</p>
-          <address class="location__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+          <address class="location__address">ул. Большая Конюшенная, д. 19/8 <span
+              class=location__city>Санкт-Петербург</span></address>
         </div>
         <img class="location__map" src="img/index/location.jpg" width="320" height="362"
           alt="Местоположение Кэн энерджи на карте.">
       </section>
+      <div class="contacts__wrapper">
       <section class="main-footer__contacts contacts">
         <a class="main-footer__logo">
           <img class="logo__image" src="img/index/logo-footer.svg" width="128" height="24" alt="Название Кэт энерджи.">

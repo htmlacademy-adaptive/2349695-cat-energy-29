@@ -1,5 +1,16 @@
 .catalog-article {
   padding: 35px 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    padding-top: 70px;
+    padding-bottom: 75px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 192px;
+    padding: 0;
+  }
 }
 
 .catalog-article__text {
@@ -12,8 +23,17 @@
   font-family: "Lato", serif;
   font-size: 16px;
   font-weight: 400;
-  font-style: normal ;
   line-height: 20px;
   margin: 0;
   padding: 187px 61px 43px 58px;
+
+  @media (min-width: @tablet-width) {
+    background-size: cover;
+    padding: 71px 125px 69px 421px;
+    text-align: start;
+  }
+  @media (min-width: @desktop-width) {
+    padding: 185px 40px 43px;
+    text-align: center;
+  }
 }

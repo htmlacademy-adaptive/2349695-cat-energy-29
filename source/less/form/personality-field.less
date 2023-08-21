@@ -1,11 +1,32 @@
 .personality-field {
-  margin-bottom:24px;
+  margin-bottom: 24px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 72px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 570px;
+    margin-right: 80px;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .selection-form__wrapper {
+    display: flex;
+    margin-bottom: 70px;
+  }
 }
 
 .personality-list__item {
   margin-bottom: 14px;
   display: flex;
   align-items: center;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 20px;
+  }
 }
 
 .personality-list__item:last-child {
@@ -14,11 +35,11 @@
 
 .personality-list__label {
   white-space: nowrap;
-  margin-right:13px;
+  margin-right: 13px;
 }
 
 .personality-list__input {
-  color:#444;
+  color: #444;
   font-family: "Oswald", serif;
   font-size: 16px;
   font-style: normal;
@@ -30,4 +51,10 @@
   padding-bottom: 13px;
   padding-left: 15px;
   flex-grow: 1;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: normal;
+    padding: 11px 20px;
+  }
 }
