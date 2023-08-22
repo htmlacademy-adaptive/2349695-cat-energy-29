@@ -1,8 +1,9 @@
 .main-header {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 13px 20px 15px;
+  padding: 13px 20px 14px;
   position: relative;
   z-index: 1;
 
@@ -19,6 +20,7 @@
 .main-header__logo {
   display: flex;
   align-items: center;
+  margin-right: 65px;
 
   @media (min-width: @tablet-width) {
     margin-right: 94px;
@@ -63,6 +65,22 @@
 }
 
 .main-header__toggle {
+  width: 24px;
+  height:24px;
+  background-color: #FFF;
+  background-image: url("../img/index/logo-burger.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  border: none;
+  display: block;
+  z-index: 2;
+
+  &--opened {
+    background-image: url("../img/index/logo-close-menu.svg");
+  }
+
+
   @media (min-width: @tablet-width) {
     display: none;
   }
