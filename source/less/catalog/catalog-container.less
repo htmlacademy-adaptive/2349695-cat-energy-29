@@ -14,13 +14,14 @@
 }
 
 .catalog-container__title {
-  padding-top: 27px;
-  padding-bottom: 41px;
+  padding: 26px 0 41px 20px;
   background-color: #FFF;
+  border-top: 1px solid #D9D9D9;
 
   @media (min-width: @tablet-width) {
     padding-top: 0;
     padding-bottom: 84px;
+    border-top: none;
   }
 
   @media (min-width: @desktop-width) {
@@ -28,11 +29,14 @@
   }
 }
 
-.catalog-container__wrapper {
+
+.catalog__wrapper {
+
   @media (min-width: @desktop-width) {
-    display: grid;
-    grid-template-columns: 895px 245px;
-    column-gap: 80px;
+    position: relative;
+    width: 1220px;
+    padding: 0 110px;
     padding-bottom: 87px;
+    margin: 0 auto;
   }
 }
