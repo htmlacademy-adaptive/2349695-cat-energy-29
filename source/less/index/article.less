@@ -6,6 +6,7 @@
     padding: 0 30px;
     width: 708px;
   }
+
   @media (min-width: @desktop-width) {
     width: 1220px;
     padding: 82px 110px 71px 110px;
@@ -22,42 +23,58 @@
   position: relative;
 
   &--weight-loss::before {
-    content:"";
+    content: "";
     position: absolute;
-    width:50px;
-    height:53px;
+    width: 50px;
+    height: 53px;
     background-image: url("../img/index/cat-article-slim.svg");
     background-repeat: no-repeat;
-    top:21px;
-    left:20px;
+    top: 21px;
+    left: 20px;
 
     @media (min-width: @tablet-width) {
       width: 200px;
-      height:200px;
+      height: 200px;
       background-size: contain;
       top: 81px;
-      right:63px;
-      left:auto;
+      right: 63px;
+      left: auto;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 100px;
+      height: 100px;
+      top: 47px;
+      left: 52px;
+      right: auto;
     }
   }
 
   &--weight-gain::before {
-    content:"";
+    content: "";
     position: absolute;
     width: 67px;
-    height:50px;
+    height: 50px;
     background-image: url("../img/index/cat-article-pro.svg");
     background-repeat: no-repeat;
-    top:24px;
-    left:13px;
+    top: 24px;
+    left: 13px;
 
     @media (min-width: @tablet-width) {
       width: 269px;
-      height:200px;
+      height: 200px;
       background-size: contain;
       top: 91px;
-      right:29px;
-      left:auto;
+      right: 29px;
+      left: auto;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 134px;
+      height: 100px;
+      top:47px;
+      left:33px;
+      right: auto;
     }
   }
 
@@ -65,11 +82,13 @@
     padding: 77px 29px 57px 53px;
     margin-bottom: 30px;
   }
+
   @media (min-width: @desktop-width) {
     padding: 77px 67px 59px 52px;
     margin-bottom: 0;
   }
 }
+
 
 .article:last-child {
   margin-bottom: 0;
@@ -92,6 +111,7 @@
     margin-left: 0;
     margin-bottom: 24px;
   }
+
   @media (min-width: @desktop-width) {
     padding-left: 162px;
     margin-bottom: 73px;
@@ -108,6 +128,7 @@
     margin-bottom: 48px;
     border-bottom: none;
   }
+
   @media (min-width: @desktop-width) {
     max-width: 451px;
     margin-bottom: 27px;
@@ -124,8 +145,8 @@
   text-transform: uppercase;
   display: inline-block;
   padding: 4px 0;
-  padding-right:47px;
-  margin-top:15px;
+  padding-right: 47px;
+  margin-top: 15px;
   background-image: url("../img/index/icon-arrow.svg");
   background-repeat: no-repeat;
   background-position: center right;

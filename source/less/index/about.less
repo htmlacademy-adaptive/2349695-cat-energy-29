@@ -4,6 +4,7 @@
   @media (min-width: @tablet-width) {
     padding: 45px 109px 47px 30px;
   }
+
   @media (min-width: @desktop-width) {
     padding: 0 110px 70px 110px;
   }
@@ -24,10 +25,12 @@
 
   @media (min-width: @tablet-width) {
     display: grid;
-    grid-template-columns: repeat(2,249px);
+    grid-template-columns: repeat(2, 249px);
     row-gap: 37px;
     column-gap: 137px;
+    counter-reset: background-number;
   }
+
   @media (min-width: @desktop-width) {
     grid-template-columns: repeat(4, 246px);
     gap: 80px;
@@ -37,26 +40,60 @@
 .about-list__item {
   padding-left: 80px;
   margin-bottom: 26px;
-  background-repeat: no-repeat;
-  background-position: left;
+  position: relative;
 
-  &--nutrient-advantage {
-    background-image: url("../img/index/about-nutrient-advantage.png");
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-color: #68b738;
+    background-repeat: no-repeat;
+    background-position: center;
   }
-  &--release-advantage {
-    background-image: url("../img/index/about-release-advantage.png");
+
+  &--nutrient-advantage::before {
+    background-image: url("../img/index/icon-leaf.svg");
   }
-  &--meal-advantage {
-    background-image: url("../img/index/about-meal-advantage.png");
+
+  &--release-advantage::before {
+    background-image: url("../img/index/icon-release.svg");
   }
-  &--timing-advantage {
-    background-image: url("../img/index/about-timing-advantage.png");
+
+  &--meal-advantage::before {
+    background-image: url("../img/index/icon-meal.svg");
+  }
+
+  &--timing-advantage::before {
+    background-image: url("../img/index/icon-timing.svg");
   }
 
   @media (min-width: @tablet-width) {
-    padding: 197px 26px 57px 0;
+    padding: 151px 0 57px 0;
     margin-bottom: 0;
+    counter-increment: background-number;
+
+    &::before {
+      width: 80px;
+      height: 80px;
+      top: 40px;
+    }
+
+    &::after {
+      content: counter(background-number);
+      position: absolute;
+      color: #F2F2F2;
+      font-family: "Oswald";
+      font-size: 280px;
+      line-height: 280px;
+      top:0;
+      right:0;
+      z-index: -1;
+    }
   }
+
   @media (min-width: @desktop-width) {
     padding: 151px 22px 57px 0;
   }
