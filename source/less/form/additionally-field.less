@@ -18,14 +18,16 @@
     column-gap: 100px;
     row-gap: 32px;
   }
+
   @media (min-width: @desktop-width) {
     grid-template-columns: repeat(4, 305px);
-    gap:0;
+    gap: 0;
   }
 }
 
 .additionally-list__item {
   margin-bottom: 13px;
+  padding: 6px 0;
 
   @media (min-width: @desktop-width) {
     margin-bottom: 0;
@@ -34,6 +36,31 @@
 
 .additionally-list__item:last-child {
   margin-bottom: 0;
+}
+
+.additionally-list__label {
+  position: relative;
+  display: block;
+  padding-left: 45px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 60px;
+  }
+}
+
+.additionally-list__mark {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  transform: translateY(-50%);
+  border: 1px solid #CDCDCD;
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .additionally-list__check {
@@ -46,5 +73,15 @@
 
   @media (min-width: @desktop-width) {
     margin-right: 20px;
+  }
+}
+
+.additionally-list__check:checked+.additionally-list__mark {
+  background-image: url("../img/form/tick.svg");
+  background-repeat: no-repeat;
+  background-position: 1px;
+
+  @media (min-width: @tablet-width) {
+    background-position: 7px;
   }
 }
