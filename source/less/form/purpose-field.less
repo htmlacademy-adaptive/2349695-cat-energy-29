@@ -51,6 +51,10 @@
   border: 1px solid #CDCDCD;
   border-radius: 50%;
 
+  &:hover {
+    border-color: #BABABA;
+  }
+
   @media (min-width: @tablet-width) {
     width: 40px;
     height: 40px;
@@ -82,3 +86,8 @@
     height: 18px;
   }
 }
+
+.purpose-list__check:disabled + .purpose-list__mark {
+  opacity: 0.3;
+}
+
