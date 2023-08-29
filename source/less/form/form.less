@@ -15,7 +15,6 @@
   padding-top: 27px;
   margin-bottom: 37px;
   text-transform: none;
-  border-top: 1px solid #D9D9D9;
 
   @media (min-width: @tablet-width) {
     padding-top: 0;
@@ -76,6 +75,34 @@
   line-height: 26px;
   text-transform: none;
   margin-bottom: 35px;
+  position: relative;
+  width: 100%;
+  background-color: transparent;
+
+  & span {
+    background-color: #ffffff;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: -20px;
+
+    @media (min-width: @tablet-width) {
+      padding-left: 40px;
+      padding-right: 40px;
+      margin-left: -40px;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100vw;
+    height: 2px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #68b738;
+    z-index: -1;
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
@@ -110,7 +137,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    width:570px;
+    width: 570px;
     margin-right: 80px;
   }
 }

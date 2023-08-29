@@ -58,10 +58,11 @@
     border-color: #CDCDCD;
   }
   &:focus {
-    border-color: #444;
+    border: 2px solid #444;
   }
-
-
+  &:invalid {
+    border:  2px solid #FF8282;
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 20px;

@@ -59,16 +59,17 @@
   line-height: 18px;
   text-transform: uppercase;
   border: 1px solid #E7E7E7;
-  padding: 14px;
-  padding-bottom: 13px;
-  padding-left: 15px;
+  padding: 14px 32px 13px 15px;
   flex-grow: 1;
 
   &:hover {
     border-color: #CDCDCD;
   }
   &:focus {
-    border-color: #444;
+    border: 2px solid #444;
+  }
+  &:invalid {
+    border:  2px solid #FF8282;
   }
 
 

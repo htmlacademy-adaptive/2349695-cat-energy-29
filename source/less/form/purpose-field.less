@@ -6,7 +6,7 @@
   @media (min-width: @tablet-width) {
     border: 1px solid #E7E7E7;
     padding: 23px 0 27px 27px;
-    margin-bottom:65px;
+    margin-bottom: 65px;
   }
 
   @media (min-width: @desktop-width) {
@@ -37,7 +37,7 @@
   padding-left: 45px;
 
   @media (min-width: @tablet-width) {
-   padding-left: 60px;
+    padding-left: 60px;
   }
 }
 
@@ -70,7 +70,7 @@
   }
 }
 
-.purpose-list__check:checked + .purpose-list__mark::before {
+.purpose-list__check:checked+.purpose-list__mark::before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -87,7 +87,10 @@
   }
 }
 
-.purpose-list__check:disabled + .purpose-list__mark {
+.purpose-list__check:disabled+.purpose-list__mark {
   opacity: 0.3;
 }
 
+.purpose-list__check:disabled~span {
+  opacity: 0.3;
+}
