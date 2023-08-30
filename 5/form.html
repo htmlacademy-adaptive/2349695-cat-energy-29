@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="form" lang="ru">
+<html class="form-html" lang="ru">
 
 <head>
   <meta charset="utf-8">
@@ -10,7 +10,6 @@
 </head>
 
 <body class="form__body">
-  <div class="wrapper">
     <header class="main-header">
       <a class="main-header__logo">
         <img class="main-header__logo--image" src="img/index/logo.svg" width="33" height="38"
@@ -18,10 +17,10 @@
         <img class="main-header__logo--text" src="img/index/logo-name.svg" width="101" height="18"
           alt="Название Кэт энерджи.">
       </a>
+      <nav class="main-nav main-nav--nojs">
       <button class="main-header__toggle" type="button">
         <span class="visually-hidden">Открыть или закрыть выпадающее меню.</span>
       </button>
-      <nav class="main-nav main-nav--nojs">
         <ul class="main-nav__list nav-list main-nav__list--closed">
           <li class="nav-list__item">
             <a class="nav-list__link" href="index.html">Главная</a>
@@ -35,7 +34,6 @@
         </ul>
       </nav>
     </header>
-  </div>
   <main class="form">
     <section class="selection">
       <h1 class="form__title title">Подбор программы</h1>
@@ -43,7 +41,7 @@
       <form class="selection__form selection-form" action="https://echo.htmlacademy.ru/" method="get">
         <div class="selection-form__wrapper">
           <fieldset class="selection-form__group personality-field">
-            <legend class="selection-form__title visually-hidden">Данные о животном.</legend>
+            <legend class="visually-hidden">Данные о животном.</legend>
             <ul class="selection-form__list personality-list">
               <li class="personality-list__item">
                 <label class="personality-list__label" for="pet-name">Имя:*</label>
@@ -52,38 +50,36 @@
               </li>
               <li class="personality-list__item">
                 <label class="personality-list__label" for="pet-weight">Вес (кг):*</label>
-                <input class="personality-list__input" type="text" name="pet-weight" id="pet-weight" placeholder="7"
+                <input class="personality-list__input" type="number" name="pet-weight" id="pet-weight" placeholder="7"
                   required>
               </li>
               <li class="personality-list__item">
                 <label class="personality-list__label" for="pet-age">Возраст (лет):</label>
-                <input class="personality-list__input" type="text" name="pet-age" id="pet-age" placeholder="7">
+                <input class="personality-list__input" type="number" name="pet-age" id="pet-age" placeholder="7">
               </li>
             </ul>
           </fieldset>
           <fieldset class="selection-form__group purpose-field">
-            <legend class="selection-form__title visually-hidden">Желаемый результат.</legend>
+            <legend class="visually-hidden">Желаемый результат.</legend>
             <ul class="selection-form__list purpose-list">
               <li class="purpose-list__item">
                 <label class="purpose-list__label">
-                  <input class="visually-hidden purpose-list__check" type="radio"
-                    name="program" value="losing-weight" checked>
+                  <input class="visually-hidden purpose-list__check" type="radio" name="program" value="losing-weight"
+                    checked>
                   <span class="purpose-list__mark"></span>
                   <span class="purpose-list__title">Похудение</span>
                 </label>
               </li>
               <li class="purpose-list__item">
                 <label class="purpose-list__label">
-                  <input class="visually-hidden purpose-list__check" type="radio"
-                    name="program" value="weight-gain">
+                  <input class="visually-hidden purpose-list__check" type="radio" name="program" value="weight-gain">
                   <span class="purpose-list__mark"></span>
                   <span class="purpose-list__title">Набор массы</span>
                 </label>
               </li>
               <li class="purpose-list__item">
                 <label class="purpose-list__label">
-                  <input class="visually-hidden purpose-list__check" type="radio"
-                    name="program" value="dont-know">
+                  <input class="visually-hidden purpose-list__check" type="radio" name="program" value="dont-know">
                   <span class="purpose-list__mark"></span>
                   <span class="purpose-list__title">Не знаю (Нужен ваш совет)</span>
                 </label>
@@ -92,9 +88,9 @@
           </fieldset>
         </div>
         <fieldset class="selection-form__group contacts-field">
-          <div class="title__wrapper">
-            <legend class="selection-form__title contacts-field__title">Контактные данные (владельца кота)</legend>
-          </div>
+          <legend class="selection-form__title contacts-field__title">
+            <span>Контактные данные (владельца кота)</span>
+          </legend>
           <ul class="selection-form__list contacts-list">
             <li class="contacts-list__item">
               <label class="contacts-list__label" for="email">E-mail:*</label>
@@ -109,18 +105,18 @@
           </ul>
         </fieldset>
         <fieldset class="selection-form__group comment-field">
-          <div class="title__wrapper">
-          <legend class="selection-form__title">Комментарий</legend>
-          </div>
+          <legend class="selection-form__title">
+            <span>Комментарий</span>
+          </legend>
           <label class="selection-form__label" for="comment">
             <textarea class="selection-form__textarea" name="comment" id="comment" rows="5"
               placeholder="Расскажите обо всех повадках кота"></textarea>
           </label>
         </fieldset>
         <fieldset class="selection-form__group additionally-field">
-          <div class="title__wrapper">
-          <legend class="selection-form__title">Дополнительно</legend>
-          </div>
+          <legend class="selection-form__title">
+            <span>Дополнительно</span>
+          </legend>
           <ul class="selection-form__list additionally-list">
             <li class="additionally-list__item">
               <label class="additionally-list__label">
@@ -160,8 +156,8 @@
     </section>
   </main>
   <footer class="main-footer">
-    <section class="main-footer__location location">
-      <div class="location__wrapper location__wrapper--form">
+    <section class="main-footer__location location location--form">
+      <div class="location__wrapper">
         <h2 class="visually-hidden">Наш адрес</h2>
         <p class="location__text">Приглашаем к сотрудничеству дилеров!</p>
         <address class="location__address">ул. Большая Конюшенная, д. 19/8 <span

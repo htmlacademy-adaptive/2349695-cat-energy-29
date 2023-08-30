@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="catalog" lang="ru">
+<html class="catalog-html" lang="ru">
 
 <head>
   <meta charset="utf-8">
@@ -10,43 +10,37 @@
 </head>
 
 <body class="catalog__body">
-  <div class="wrapper">
-    <header class="main-header">
-      <a class="main-header__logo">
-        <img class="main-header__logo--image" src="img/index/logo.svg" width="33" height="38"
-          alt="Логотип Кэт энерджи.">
-        <img class="main-header__logo--text" src="img/index/logo-name.svg" width="101" height="18"
-          alt="Название Кэт энерджи.">
-      </a>
+  <header class="main-header">
+    <a class="main-header__logo">
+      <img class="main-header__logo--image" src="img/index/logo.svg" width="33" height="38" alt="Логотип Кэт энерджи.">
+      <img class="main-header__logo--text" src="img/index/logo-name.svg" width="101" height="18"
+        alt="Название Кэт энерджи.">
+    </a>
+    <nav class="main-nav main-nav--nojs">
       <button class="main-header__toggle" type="button">
         <span class="visually-hidden">Открыть или закрыть выпадающее меню.</span>
       </button>
-      <nav class="main-nav main-nav--nojs">
-        <ul class="main-nav__list nav-list main-nav__list--closed">
-          <li class="nav-list__item">
-            <a class="nav-list__link" href="index.html">Главная</a>
-          </li>
-          <li class="nav-list__item">
-            <a class="nav-list__link nav-list__link--current" href="#">Каталог продукции</a>
-          </li>
-          <li class="nav-list__item">
-            <a class="nav-list__link" href="form.html">Подбор программы</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-  </div>
+      <ul class="main-nav__list nav-list main-nav__list--closed">
+        <li class="nav-list__item">
+          <a class="nav-list__link" href="index.html">Главная</a>
+        </li>
+        <li class="nav-list__item">
+          <a class="nav-list__link nav-list__link--current" href="#">Каталог продукции</a>
+        </li>
+        <li class="nav-list__item">
+          <a class="nav-list__link" href="form.html">Подбор программы</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
   <main class="catalog">
     <section class="products">
       <h1 class="catalog-container__title title">Каталог продукции</h1>
       <h2 class="visually-hidden">Выбор товаров продукции Кэт энерджи</h2>
       <ul class="products__list products-list">
         <li class="products-list__item card">
-          <a class="card__link">
-            <img class="card__image" src="img/catalog/product-1.jpg" width="68" height="78" alt="Cat Energy PRO 500 г.">
-
-            <h3 class="card__title">Cat Energy PRO 500 г</h3>
-          </a>
+          <img class="card__image" src="img/catalog/product-1.jpg" width="68" height="78" alt="Cat Energy PRO 500 г.">
+          <h3 class="card__title">Cat Energy PRO 500 г</h3>
           <dl class="card__list">
             <dt class="card__category">Масса</dt>
             <dd class="card__value">500 г</dd>
@@ -58,11 +52,8 @@
           <button class="card__button button" type="button">Заказать</button>
         </li>
         <li class="products-list__item card">
-          <a class="card__link">
-            <img class="card__image" src="img/catalog/product-2.jpg" width="84" height="100"
-              alt="Cat Energy PRO 1000 г.">
-            <h3 class="card__title">Cat Energy PRO 1000 г</h3>
-          </a>
+          <img class="card__image" src="img/catalog/product-2.jpg" width="84" height="100" alt="Cat Energy PRO 1000 г.">
+          <h3 class="card__title">Cat Energy PRO 1000 г</h3>
           <dl class="card__list">
             <dt class="card__category">Масса</dt>
             <dd class="card__value">1000 г</dd>
@@ -74,10 +65,8 @@
           <button class="card__button button" type="button">Заказать</button>
         </li>
         <li class="products-list__item card">
-          <a class="card__link">
-            <img class="card__image" src="img/catalog/product-3.jpg" width="68" height="78" alt="Cat Energy PRO 500 г.">
-            <h3 class="card__title">Cat Energy PRO 500 г</h3>
-          </a>
+          <img class="card__image" src="img/catalog/product-3.jpg" width="68" height="78" alt="Cat Energy PRO 500 г.">
+          <h3 class="card__title">Cat Energy PRO 500 г</h3>
           <dl class="card__list">
             <dt class="card__category">Масса</dt>
             <dd class="card__value">500 г</dd>
@@ -89,11 +78,8 @@
           <button class="card__button button" type="button">Заказать</button>
         </li>
         <li class="products-list__item card">
-          <a class="card__link">
-            <img class="card__image" src="img/catalog/product-4.jpg" width="84" height="100"
-              alt="Cat Energy PRO 1000 г.">
-            <h3 class="card__title">Cat Energy PRO 1000 г</h3>
-          </a>
+          <img class="card__image" src="img/catalog/product-4.jpg" width="84" height="100" alt="Cat Energy PRO 1000 г.">
+          <h3 class="card__title">Cat Energy PRO 1000 г</h3>
           <dl class="card__list">
             <dt class="card__category">Масса</dt>
             <dd class="card__value">1000 г</dd>
@@ -105,11 +91,8 @@
           <button class="card__button button" type="button">Заказать</button>
         </li>
         <li class="products-list__item card">
-          <a class="card__link">
-            <img class="card__image" src="img/catalog/product-5.jpg" width="68" height="78"
-              alt="Cat Energy SLIM 500 г.">
-            <h3 class="card__title">Cat Energy SLIM 500 г</h3>
-          </a>
+          <img class="card__image" src="img/catalog/product-5.jpg" width="68" height="78" alt="Cat Energy SLIM 500 г.">
+          <h3 class="card__title">Cat Energy SLIM 500 г</h3>
           <dl class="card__list">
             <dt class="card__category">Масса</dt>
             <dd class="card__value">500 г</dd>
@@ -121,11 +104,9 @@
           <button class="card__button button" type="button">Заказать</button>
         </li>
         <li class="products-list__item card">
-          <a class="card__link">
-            <img class="card__image" src="img/catalog/product-6.jpg" width="84" height="100"
-              alt="Cat Energy SLIM 1000 г.">
-            <h3 class="card__title">Cat Energy SLIM 1000 г</h3>
-          </a>
+          <img class="card__image" src="img/catalog/product-6.jpg" width="84" height="100"
+            alt="Cat Energy SLIM 1000 г.">
+          <h3 class="card__title">Cat Energy SLIM 1000 г</h3>
           <dl class="card__list">
             <dt class="card__category">Масса</dt>
             <dd class="card__value">1000 г</dd>
@@ -137,11 +118,8 @@
           <button class="card__button button" type="button">Заказать</button>
         </li>
         <li class="products-list__item card">
-          <a class="card__link">
-            <img class="card__image" src="img/catalog/product-7.jpg" width="84" height="100"
-              alt="Cat Energy SLIM 500 г.">
-            <h3 class="card__title">Cat Energy SLIM 500 г</h3>
-          </a>
+          <img class="card__image" src="img/catalog/product-7.jpg" width="84" height="100" alt="Cat Energy SLIM 500 г.">
+          <h3 class="card__title">Cat Energy SLIM 500 г</h3>
           <dl class="card__list">
             <dt class="card__category">Масса</dt>
             <dd class="card__value">500 г</dd>
@@ -161,9 +139,9 @@
     </section>
     <div class="catalog__wrapper">
       <section class="additional">
-        <div class="title__wrapper">
-          <h2 class="additional__title">Дополнительные товары</h2>
-        </div>
+        <h2 class="additional__title">
+          <span>Дополнительные товары</span>
+        </h2>
         <ul class="additional__list additional-product">
           <li class="additional-product__item">
             <div class="additional-product__wrapper">
@@ -213,8 +191,8 @@
     </div>
   </main>
   <footer class="main-footer">
-    <section class="main-footer__location location">
-      <div class="location__wrapper location__wrapper--catalog">
+    <section class="main-footer__location location location--catalog">
+      <div class="location__wrapper">
         <h2 class="visually-hidden">Наш адрес</h2>
         <p class="location__text">Приглашаем к сотрудничеству дилеров!</p>
         <address class="location__address">ул. Большая Конюшенная, д. 19/8 <span
