@@ -1,13 +1,19 @@
 .additional {
+  width: 280px;
+  padding: 0 20px;
+  margin: 0 auto;
   padding-top: 25px;
 
   @media (min-width: @tablet-width) {
+    width: 708px;
+    padding: 0 30px;
     padding-top: 70px;
   }
 
   @media (min-width: @desktop-width) {
+    width: 1220px;
+    padding: 0;
     padding-top: 76px;
-    width: 895px;
   }
 }
 
@@ -19,6 +25,34 @@
   font-weight: 400;
   line-height: 24px;
   margin-bottom: 36px;
+  position: relative;
+  width: 100%;
+  background-color: transparent;
+
+  & span {
+    background-color: #ffffff;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: -20px;
+
+    @media (min-width: @tablet-width) {
+      padding-left: 40px;
+      padding-right: 40px;
+      margin-left: -40px;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100vw;
+    height: 2px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #68b738;
+    z-index: -1;
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
@@ -27,16 +61,27 @@
   }
 }
 
+
+
 .additional-product {
   margin: 0;
   padding: 0;
   list-style-type: none;
+
+  @media (min-width: @desktop-width) {
+    max-width: 896px;
+  }
 }
 
 .additional-product__item {
-  padding: 13px 20px 19px;
+  padding: 12px 0 19px 0;
   display: grid;
   grid-template-columns: repeat(2, 140px);
+  border-top: 1px solid #CDCDCD;
+
+  &:last-child {
+    border-bottom: 1px solid #CDCDCD;
+  }
 
   @media (min-width: @tablet-width) {
     padding: 26px 38px 28px 38px;
@@ -74,6 +119,8 @@
 }
 
 .additional-product__wrapper {
+  grid-column: 1 / -1;
+
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
@@ -88,7 +135,6 @@
 
 .additional-product__list {
   margin: 0;
-  grid-column: 1 / -1;
   display: flex;
   justify-content: space-between;
   color: #444;
@@ -103,8 +149,16 @@
     align-items: center;
     font-size: 16px;
     line-height: 20px;
-    width: 285px;
+    width: 216px;
   }
+}
+
+.additional-product__quantity {
+  width: 80%;
+}
+.additional-product__value {
+  margin-inline-start: 0;
+  width: 20%;
 }
 
 .additional-product__button {
