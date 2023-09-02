@@ -1,6 +1,7 @@
 .form {
   width: 320px;
   margin: 0 auto;
+  overflow:hidden;
 
   @media (min-width: @tablet-width) {
     width: 768px;
@@ -84,6 +85,7 @@
     padding-left: 20px;
     padding-right: 20px;
     margin-left: -20px;
+    display: inline-block;
 
     @media (min-width: @tablet-width) {
       padding-left: 40px;
@@ -121,6 +123,13 @@
 @media (min-width: @desktop-width) {
   .selection-form__submit-wrapper {
     margin-bottom: 80px;
+  }
+}
+
+
+@media (min-width: @tablet-width) {
+  .selection-form__title br {
+    display:none;
   }
 }
 
