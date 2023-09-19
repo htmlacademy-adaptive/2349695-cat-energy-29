@@ -31,6 +31,7 @@
   margin-bottom: 14px;
   display: flex;
   align-items: center;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 20px;
@@ -59,7 +60,7 @@
   line-height: 18px;
   text-transform: uppercase;
   border: 1px solid #E7E7E7;
-  padding: 14px 32px 13px 15px;
+  padding: 14px 35px 13px 15px;
   flex-grow: 1;
 
   &:hover {
@@ -72,28 +73,20 @@
     border:  2px solid #FF8282;
   }
 
-
   &--envelope {
-    background-image: url("../img/form/email.svg");
-    background-repeat: no-repeat;
-    background-position: center right 12px;
-
-    &:focus {
-      background-image: url("../img/form/email-focus.svg");;
-    }
+    position: absolute;
+    right: 14px;
   }
 
   &--phone {
-    background-image: url("../img/form/phone.svg");
-    background-repeat: no-repeat;
-    background-position: center right 13px;
+    position: absolute;
+    right: 14px;
   }
-
-
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: normal;
     padding: 11px 20px;
+    padding-right: 35px;
   }
 }
