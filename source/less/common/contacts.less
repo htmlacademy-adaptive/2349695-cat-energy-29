@@ -38,6 +38,13 @@
 .logo__image {
   display: block;
   margin: 0;
+
+  &:hover {
+    opacity: 0.8;
+  }
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .socials-list {
@@ -49,12 +56,12 @@
   border-bottom: 1px solid #D9D9D9;
   padding: 0 74px;
   padding-bottom: 19px;
-  gap:24px;
+  gap: 24px;
 
   @media (min-width: @tablet-width) {
     padding-bottom: 0;
     border-bottom: none;
-    margin-top:0;
+    margin-top: 0;
   }
 }
 
@@ -63,41 +70,66 @@
   height: 22px;
   background-repeat: no-repeat;
   background-position: center;
+  background-color: #666666;
 
   &--vk {
-    background-image: url("../img/index/vkontakte.svg");
+    mask-image: url("../img/sprite.svg#icon-vkontakte");
   }
 
   &--youtube {
-    background-image: url("../img/index/youtube.svg");
+    mask-image: url("../img//sprite.svg#icon-youtube");
   }
 
   &--telegram {
-    background-image: url("../img/index/telegram.svg");
+    mask-image: url("../img//sprite.svg#icon-telegram");
+  }
+  &:hover {
+    background-color: #68b738;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
 .main-footer__copyright {
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  @media (min-width: @tablet-width) {
-    order: 1;
-    margin-top:0;
-  }
-}
-
-.copyright__text {
-  text-transform: none;
-  color: #444;
-  font-family: "Lato", serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
+  font-family: "Lato", serif;
+  text-transform: none;
+  color: #444;
+  margin-top: 20px;
+  padding: 7px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+
 
   @media (min-width: @tablet-width) {
-    margin-right: 23px;
+    margin-top: 0;
+    width: 168px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    mask-image: url("../img/sprite.svg#htmlacademy-logo");
+    width: 27px;
+    height: 34px;
+    background-color: #666666;
+  }
+
+  &:hover::after {
+    background-color: #68b738;
+  }
+  &:hover {
+    opacity: 0.8;
+  }
+  &:active {
+    opacity: 0.3;
   }
 }
