@@ -3,6 +3,8 @@ import plumber from 'gulp-plumber';
 import less from 'gulp-less';
 import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
+import rename from 'gulp-rename';
+import htmlmin from 'gulp-htmlmin';
 import browser from 'browser-sync';
 
 // Styles
@@ -14,8 +16,17 @@ export const styles = () => {
     .pipe(postcss([
       autoprefixer()
     ]))
-    .pipe(gulp.dest('source/css', { sourcemaps: '.' }))
+    .pipe(rename('style.min.css'))
+    .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
     .pipe(browser.stream());
+}
+
+//HTML
+
+export const html = () => {
+  return gulp.src('source/*.html')
+  .pipe (htmlmin({ collapseWhitespace: true }))
+  .pipe (gulp.dest('build'));
 }
 
 // Server
