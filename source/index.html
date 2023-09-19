@@ -6,23 +6,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body class="index__body">
-    <header class="main-header">
+  <header class="main-header">
+    <div class="main-header__wrapper">
       <a class="main-header__logo">
-        <img class="main-header__logo--image" src="img/index/logo.svg" width="33" height="38"
-          alt="Логотип Кэт энерджи.">
-        <img class="main-header__logo--text" src="img/index/logo-name.svg" width="101" height="18"
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/index/header/logo-desktop.svg" width="70" height="59">
+          <source media="(min-width: 768px)" srcset="img/index/header/logo-tablet.svg" width="60" height="50">
+          <img class="main-header__logo--image" src="img/index/header/logo.svg" width="33" height="38"
+            alt="Логотип Кэт энерджи.">
+        </picture>
+        <img class="main-header__logo--text" src="img/index/header/logo-name.svg" width="101" height="18"
           alt="Название Кэт энерджи.">
       </a>
       <nav class="main-nav main-nav--nojs">
-      <button class="main-header__toggle" type="button">
-        <span class="visually-hidden">Открыть или закрыть выпадающее меню.</span>
-      </button>
+        <button class="main-header__toggle" type="button">
+          <span class="visually-hidden">Открыть или закрыть выпадающее меню.</span>
+        </button>
         <ul class="main-nav__list nav-list main-nav__list--closed">
           <li class="nav-list__item">
-            <a class="nav-list__link nav-list__link--index nav-list__link--current nav-list__link--index-current" href="#">Главная</a>
+            <a class="nav-list__link nav-list__link--index nav-list__link--current nav-list__link--index-current"
+              href="#">Главная</a>
           </li>
           <li class="nav-list__item">
             <a class="nav-list__link nav-list__link--index" href="catalog.html">Каталог продукции</a>
@@ -32,14 +42,23 @@
           </li>
         </ul>
       </nav>
-    </header>
+    </div>
+  </header>
   <main class="index-container">
     <section class="hero">
       <div class="wrapper hero__wrapper">
         <h1 class="hero__title title">Функциональное питание для котов</h1>
         <p class="hero__text">Занялся собой? Займись котом!</p>
-        <img class="hero__image" src="img/index/index-hero-image.png" width="280" height="270"
-          alt="Баночка корма Кэт энерджи.">
+        <picture class="hero__picture">
+          <source media="(min-width: 1440px)"
+            srcset="img/index/hero/index-hero-desktop@1x.png 1x, img/index/hero/index-hero-desktop@2x.png 2x"
+            width="552" height="499">
+          <source media="(min-width: 768px)"
+            srcset="img/index/hero/index-hero-tablet@1x.png 1x, img/index/hero/index-hero-tablet@2x.png 2x" width="709"
+            height="609">
+          <img class="hero__image" src="img/index/hero/index-hero@1x.png" srcset="img/index/hero/index-hero@2x.png 2x"
+            width="280" height="270" alt="Баночка корма Кэт энерджи.">
+        </picture>
         <a class="hero__link button" href="form.html">подобрать программу</a>
       </div>
     </section>
@@ -99,8 +118,13 @@
           </dl>
           <p class="example__text-total">Затраты на питание: <span class=example__price>15 000 РУБ.</span></p>
         </div>
-        <img class="slider__image" src="img/index/example-slider.png" width="280" height="256"
-          alt="СлайдерЖ форма кота до и после.">
+        <picture>
+          <source media="(min-width: 768px)"
+            srcset="img/index/slider/slider-tablet@1x.png 1x, img/index/slider/slider-tablet@2x.png 2x" width="560"
+            height="512">
+          <img class="slider__image" src="img/index/slider/slider@1x.png" srcset="img/index/slider/slider@2x.png 2x"
+            width="280" height="256" alt="Слайдер форма кота до и после.">
+        </picture>
       </div>
     </section>
   </main>
@@ -112,13 +136,15 @@
         <address class="location__address">ул. Большая Конюшенная, д. 19/8 <span
             class=location__city>Санкт-Петербург</span></address>
       </div>
-      <iframe class="location__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037876728594!2d30.320472477090586!3d59.93871647491513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1692717138708!5m2!1sru!2sru"
-      width="320" height="362" title="Местоположение Кэн энерджи на карте." style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe class="location__map"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037876728594!2d30.320472477090586!3d59.93871647491513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1692717138708!5m2!1sru!2sru"
+        width="320" height="362" title="Местоположение Кэн энерджи на карте." style="border:0;" allowfullscreen=""
+        loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
     <div class="contacts__wrapper">
-    <section class="main-footer__contacts contacts">
-      <a class="main-footer__logo">
-        <img class="logo__image" src="img/index/logo-footer.svg" width="128" height="24" alt="Название Кэт энерджи.">
+      <section class="main-footer__contacts contacts">
+        <a class="main-footer__logo">
+          <img class="logo__image" src="img/index/logo-footer.svg" width="128" height="24" alt="Название Кэт энерджи.">
         </a>
         <ul class="socials-list">
           <li class="socials-list__item socials-list__item--vk">
@@ -152,7 +178,7 @@
             </defs>
           </svg>
         </a>
-    </section>
+      </section>
     </div>
   </footer>
   <script src="js/script.js"></script>
