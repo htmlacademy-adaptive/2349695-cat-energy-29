@@ -74,12 +74,34 @@
   }
 }
 
+.location__map-wrapper {
+  picture {
+    display: none;
+  }
+
+  &--nojs {
+    picture {
+      display: block;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .location__map {
+      display: none;
+    }
+  }
+}
+
 .location__map {
   display: block;
-  object-fit: cover;
-  width:100%;
+  border: none;
+  width: 100%;
 
   @media (min-width: @tablet-width) {
-    height: 400px;
+    min-height: 400px;
   }
 }

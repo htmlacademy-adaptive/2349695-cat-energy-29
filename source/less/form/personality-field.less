@@ -1,5 +1,5 @@
 .personality-field {
-  padding-bottom: 24px;
+  padding-bottom: 22px;
   border-bottom: 1px solid #D9D9D9;
 
   @media (min-width: @tablet-width) {
@@ -8,7 +8,7 @@
 
   @media (min-width: @desktop-width) {
     width: 570px;
-    margin-right: 80px;
+    margin-right: 105px;
     padding-bottom: 0;
     border-bottom: none;
   }
@@ -22,12 +22,12 @@
 }
 
 .personality-list__item {
-  margin-bottom: 14px;
+  margin-bottom: 12px;
   display: flex;
   align-items: center;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 20px;
+    margin-bottom: 18px;
   }
 }
 
@@ -57,11 +57,15 @@
   &:hover {
     border-color: #CDCDCD;
   }
+
   &:focus {
-    border: 2px solid #444;
+    border-color: #ffffff;
+    outline: 2px solid #444444;
   }
+
   &:invalid {
-    border:  2px solid #FF8282;
+    border-color: #ffffff;
+    outline: 2px solid #ff8282;
   }
 
   @media (min-width: @tablet-width) {
@@ -69,4 +73,13 @@
     line-height: normal;
     padding: 11px 20px;
   }
+}
+
+.personality-list__input::-webkit-outer-spin-button,
+.personality-list__input::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+.personality-list__input[type="number"] {
+  appearance: textfield;
 }
