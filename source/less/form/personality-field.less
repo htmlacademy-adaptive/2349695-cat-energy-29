@@ -57,11 +57,15 @@
   &:hover {
     border-color: #CDCDCD;
   }
+
   &:focus {
-    border: 2px solid #444;
+    border-color: #ffffff;
+    outline: 2px solid #444444;
   }
+
   &:invalid {
-    border:  2px solid #FF8282;
+    border-color: #ffffff;
+    outline: 2px solid #ff8282;
   }
 
   @media (min-width: @tablet-width) {
@@ -69,4 +73,13 @@
     line-height: normal;
     padding: 11px 20px;
   }
+}
+
+.personality-list__input::-webkit-outer-spin-button,
+.personality-list__input::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+.personality-list__input[type="number"] {
+  appearance: textfield;
 }

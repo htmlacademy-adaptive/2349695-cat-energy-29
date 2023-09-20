@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
+  <link rel="preload" href="fonts/oswald/oswaldregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/favicon-32x32.svg" type="image/svg+xml">
@@ -12,10 +13,10 @@
   <link rel="manifest" href="manifest.webmanifest">
 </head>
 
-<body class="index__body">
+<body class="index-html__body">
   <header class="main-header">
     <div class="main-header__wrapper">
-      <a class="main-header__logo">
+      <a class="main-header__logo" href="#">
         <picture>
           <source media="(min-width: 1440px)" srcset="img/index/header/logo-desktop.svg" width="70" height="59">
           <source media="(min-width: 768px)" srcset="img/index/header/logo-tablet.svg" width="60" height="50">
@@ -124,7 +125,7 @@
             <dt class="example__number">60 дней</dt>
             <dd class="example__description">затрачено времени</dd>
           </dl>
-          <p class="example__text-total">Затраты на питание: <span class=example__price>15 000 РУБ.</span></p>
+          <p class="example__text-total">Затраты на питание: <span class="example__price">15 000 РУБ.</span></p>
         </div>
         <picture>
           <source media="(min-width: 768px)"
@@ -147,14 +148,23 @@
         <address class="location__address">ул. Большая Конюшенная, д. 19/8 <span
             class=location__city>Санкт-Петербург</span></address>
       </div>
-      <iframe class="location__map"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037876728594!2d30.320472477090586!3d59.93871647491513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1692717138708!5m2!1sru!2sru"
-        width="320" height="362" title="Местоположение Кэн энерджи на карте." style="border:0;" allowfullscreen=""
-        loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="location__map-wrapper location__map-wrapper--nojs">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/index/map/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x" width="1440" height="400">
+          <source media="(min-width: 768px)" srcset="img/index/map/map-tablet@1x.jpg 1x, img/index/map/map-tablet@2x.jpg 2x" width="768" height="400">
+          <img class="location__map-img" src="img/index/map/map-mobile@1x.jpg" width="320" height="362" srcset="img/index/map/map-mobile@2x.jpg 2x" alt="Местоположение Кэт энерджи на карте">
+        </picture>
+        <iframe class="location__map"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036257197886!2d30.320472476878738!3d59.93871916209405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sby!4v1693142225101!5m2!1sru!2sby"
+        width="600" height="362" style="border: 0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+      </div>
     </section>
     <div class="contacts__wrapper">
       <section class="main-footer__contacts contacts">
-        <a class="main-footer__logo">
+        <h2 class="contacts__title visually-hidden">Мы в социальных сетях</h2>
+        <a class="contacts__logo">
           <img class="logo__image" src="img/index/logo-footer.svg" width="128" height="24" alt="Название Кэт энерджи.">
         </a>
         <ul class="socials-list">
@@ -174,13 +184,14 @@
             </a>
           </li>
         </ul>
-        <a class="main-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">
+        <a class="contacts__copyright" href="https://htmlacademy.ru/intensive/adaptive">
           HTML Academy
         </a>
       </section>
     </div>
   </footer>
   <script src="js/script.js"></script>
+  <script src="js/map.js"></script>
 </body>
 
 </html>
