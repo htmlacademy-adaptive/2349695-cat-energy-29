@@ -65,7 +65,7 @@ const createWebp = () => {
   .pipe(squoosh({
     webp: {}
     }))
-  .pipe(gulp.dest('build.img'));
+  .pipe(gulp.dest('build/img'));
 }
 
 // SVG
