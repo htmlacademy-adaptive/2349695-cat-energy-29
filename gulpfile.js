@@ -11,6 +11,7 @@ import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
 import svgstore from 'gulp-svgstore';
 import del from 'del';
+import { stacksvg } from 'gulp-stacksvg';
 import browser from 'browser-sync';
 
 // Styles
@@ -70,30 +71,29 @@ const createWebp = () => {
 // SVG
 
 const svg = () => {
-  return gulp.src('source/img/*.svg', '!source/img/icons/*.svg')
-  .pipe(svgo())
-  .pipe(gulp.dest('build.img'));
+  return gulp.src('source/img/**/*.svg', '!source/img/icons/*.svg')
+    .pipe(svgo())
+    .pipe(gulp.dest('build/img'))
 }
 
-const sprite = () => {
+const stack = () => {
   return gulp.src('source/img/icons/*.svg')
-  .pipe(svgo())
-  .pipe(svgstore({
-    inlineSvg: true
-    }))
-  .pipe(rename('sprite.svg'))
-  .pipe(gulp.dest('build/img'));
+    .pipe(svgo())
+    .pipe(stacksvg({ output: 'sprite' }))
+    .pipe(rename('sprite.svg'))
+    .pipe(gulp.dest('build/img'))
 }
 
 // Copy
 
 const copy = (done) => {
   gulp.src([
-    'source/fonts/*.{woff2,woff}',
+    'source/fonts/**/*.{woff2,woff}',
     'source/*.ico',
-    ], {
+    'source/*.webmanifest'
+  ], {
     base: 'source'
-    })
+  })
     .pipe(gulp.dest('build'))
     done();
 }
@@ -143,7 +143,7 @@ export const build = gulp.series(
   html,
   scripts,
   svg,
-  sprite,
+  stack,
   createWebp
   ),
 );
@@ -159,7 +159,7 @@ export default gulp.series(
   html,
   scripts,
   svg,
-  sprite,
+  stack,
   createWebp
   ),
   gulp.series(
