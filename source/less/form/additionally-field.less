@@ -1,12 +1,12 @@
 .additionally-field {
-  margin-bottom: 34px;
+  margin-bottom: 36px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 54px;
+    margin-bottom: 44px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 61px;
+    margin-bottom: 63px;
   }
 }
 
@@ -14,20 +14,20 @@
 .additionally-list {
   @media (min-width: @tablet-width) {
     display: grid;
-    grid-template-columns: repeat(2, 221px);
+    grid-template-columns: repeat(2, 244px);
     column-gap: 100px;
-    row-gap: 32px;
+    row-gap: 0;
   }
 
   @media (min-width: @desktop-width) {
-    grid-template-columns: repeat(4, 305px);
+    grid-template-columns: repeat(4, 325px);
     gap: 0;
   }
 }
 
 .additionally-list__item {
   margin-bottom: 13px;
-  padding: 6px 0;
+  padding: 5px 0;
 
   @media (min-width: @desktop-width) {
     margin-bottom: 0;
@@ -80,7 +80,7 @@
   }
 }
 
-.additionally-list__check:checked+.additionally-list__mark {
+.additionally-list__check:checked + .additionally-list__mark {
   background-image: url("../img/sprite.svg#icon-tick");
   background-size: 26px 26px;
   background-repeat: no-repeat;
@@ -95,6 +95,6 @@
   opacity: 0.3;
 }
 
-.additionally-list__check:disabled~span {
+.additionally-list__check:disabled ~ span {
   opacity: 0.3;
 }
