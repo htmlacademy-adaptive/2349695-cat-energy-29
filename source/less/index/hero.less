@@ -41,7 +41,7 @@
 
   @media (min-width: @desktop-width) {
     width: 919px;
-    padding: 143px 331px 52px 190px;
+    padding: 143px 331px 46px 190px;
     display: grid;
     grid-template-columns: 416px 503px;
   }
@@ -95,7 +95,7 @@
   }
 }
 
-.hero__image {
+.hero__picture {
   display: block;
   text-align: center;
   margin: 0 auto;
@@ -103,18 +103,20 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
-    margin-right: -47px;
+    margin-top: -26px;
   }
 
   @media (min-width: @desktop-width) {
     margin: 0;
+    grid-row: 1 / 5;
+    grid-column: 2 / 3;
+    margin-left: -50px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .hero__picture {
-    grid-row: 1 / 5;
-    grid-column: 2 / 3;
+
   }
 }
 
