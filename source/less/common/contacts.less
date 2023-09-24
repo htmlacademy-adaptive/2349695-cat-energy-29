@@ -27,18 +27,13 @@
   display: flex;
   justify-content: center;
   padding-bottom: 19px;
-  border-bottom: 1px solid #D9D9D9;
+  border-bottom: 1px solid #d9d9d9;
 
   @media (min-width: @tablet-width) {
     padding-bottom: 0;
     border-bottom: none;
     margin-right: 45px;
   }
-}
-
-.logo__image {
-  display: block;
-  margin: 0;
 
   &:hover {
     opacity: 0.8;
@@ -47,6 +42,15 @@
   &:active {
     opacity: 0.3;
   }
+
+  &:focus-visible {
+    outline: 2px solid #444444;
+  }
+}
+
+.contacts__image {
+  display: block;
+  margin: 0;
 }
 
 .socials-list {
@@ -54,7 +58,7 @@
   list-style-type: none;
   display: flex;
   margin-top: 20px;
-  border-bottom: 1px solid #D9D9D9;
+  border-bottom: 1px solid #d9d9d9;
   padding: 0 74px;
   padding-bottom: 19px;
   gap: 24px;
@@ -69,6 +73,12 @@
 .socials-list__item {
   width: 28px;
   height: 22px;
+}
+
+.socials-list__link {
+  width: 28px;
+  height: 22px;
+  display: inline-block;
   background-repeat: no-repeat;
   background-position: center;
   background-color: #666666;
@@ -85,7 +95,8 @@
     mask-image: url("../img//sprite.svg#icon-telegram");
   }
 
-  &:hover {
+  &:hover,
+  &:focus-visible {
     background-color: #68b738;
   }
 
@@ -94,13 +105,14 @@
   }
 }
 
+
 .contacts__copyright {
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
-  font-family: "Lato", serif;
+  font-family: "Lato", "Arial", serif;
   text-transform: none;
-  color: #444;
+  color: #444444;
   margin-top: 20px;
   padding: 7px 0;
   display: flex;

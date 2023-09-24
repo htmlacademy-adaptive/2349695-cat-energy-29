@@ -55,10 +55,10 @@
   width: 30px;
   height: 30px;
   transform: translateY(-50%);
-  border: 1px solid #CDCDCD;
+  border: 1px solid #cdcdcd;
 
   &:hover {
-    border-color: #BABABA;
+    border-color: #bababa;
   }
 
   @media (min-width: @tablet-width) {
@@ -97,4 +97,9 @@
 
 .additionally-list__check:disabled ~ span {
   opacity: 0.3;
+}
+
+.additionally-list__check:focus-visible + .additionally-list__mark {
+  border-color: #ffffff;
+  outline: 2px solid #444444;
 }
